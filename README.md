@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# 💸 MobiKudi — Smarter Mobile Finance for Everyone
 
-## Project info
+**MobiKudi** is an AI-powered financial management platform that helps individuals and small business owners easily track expenses, set savings goals, and gain smart financial insights — all within one simple, responsive interface.
 
-**URL**: https://lovable.dev/projects/4bdf06c1-90df-4f31-a09d-b5489d2c7eb6
+---
 
-## How can I edit this code?
+## 🌍 Live Demo
 
-There are several ways of editing your application.
+🔗 **Landing Page:** [https://mobikudi-landing-page.vercel.app/](https://mobikudi-landing-page.vercel.app/)  
+🔗 **Web App:** Accessible directly through the landing page (click **"Try Mobikudi"**) also accessible via this link
+[https://mobikudi.vercel.app](https://mobikudi.vercel.app)
 
-**Use Lovable**
+👤 **Test Credentials:**  
+Email: rasheedahdada@gmail.com 
+Password: vminkook07
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4bdf06c1-90df-4f31-a09d-b5489d2c7eb6) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Project Overview
 
-**Use your preferred IDE**
+Many people struggle with tracking their daily expenses, understanding spending habits, and building financial discipline. **MobiKudi** bridges this gap with an intuitive platform that automates expense tracking, provides clear visual analytics, and uses AI to suggest better money management practices.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Our focus is to help users — especially young adults and small entrepreneurs — achieve financial clarity without needing complex accounting tools.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🧩 Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- ✅ AI-powered insights on spending and saving patterns  
+- 💰 Expense tracking and category-based visualization  
+- 📊 Monthly financial summaries and charts  
+- 🔐 Secure login with Supabase authentication and JWT  
+- 🌐 Responsive, mobile-friendly design  
+- 💬 Easy onboarding and intuitive navigation  
+- 📅 Goal-setting and reminders  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 👣 User Flow
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+1. **Landing Page:**  
+   Users land on the MobiKudi homepage to learn about the product, view its core features, and click **“Get Started”** to access the app.
+
+2. **Sign Up / Login:**  
+   Authentication is powered by **Supabase**. Users can sign up or log in securely using their email and password.
+
+3. **Dashboard:**  
+   After logging in, users are redirected to the dashboard where they can:  
+   - Add new income or expense transactions  
+   - View categorized charts and summaries  
+   - See total income vs expenses for the month  
+   - Receive AI-driven financial insights  
+
+4. **Goals & Analytics:**  
+   Users can set saving goals, track progress, and view personalized spending analytics powered by the integrated AI model.
+
+5. **Profile & Logout:**  
+   Users can manage their profile or securely log out. The session is authenticated using JWT and ends when the user signs out.
+
+---
+
+## 🧠 Tech Stack
+
+| Layer | Technologies |
+|-------|---------------|
+| **Frontend** | React (Vite), TypeScript, Tailwind CSS |
+| **Backend** | Supabase (Database + Auth) |
+| **State Management** | Zustand |
+| **AI** | OpenAI API (for financial insight suggestions) |
+| **Hosting** | Vercel |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/DoctorRash/MobiKudi.git
+cd MobiKudi
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Create an .env file in the root directory and add:
+ini
+Copy code
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_KEY=your_supabase_key
+JWT_SECRET=your_jwt_secret
+OPENAI_API_KEY=your_openai_api_key
+4️⃣ Run the development server
+bash
+Copy code
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4bdf06c1-90df-4f31-a09d-b5489d2c7eb6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+5️⃣ Open in browser
+arduino
+Copy code
+http://localhost:5173
