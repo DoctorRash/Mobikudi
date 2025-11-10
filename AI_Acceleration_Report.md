@@ -87,6 +87,6 @@ Instead of spending hours researching or troubleshooting syntax issues, our team
 
 **Team:** MobiKudi  
 **Hackathon:** WUD Africa Hackathon 2025  
-**Team Lead/Project Manager:** Esther  
+**Team Lead/Project Manager:** Okebule Esther Abisoye  
 **Lead Developer:** Rasheedah Dada (@DoctorRash)  
 **Date:** November 2025  
