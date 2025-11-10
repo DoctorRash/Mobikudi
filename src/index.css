@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* MobiKudi Brand Colors */
+    --background: 0 0% 98%;
+    --foreground: 164 85% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 164 85% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 164 85% 12%;
+
+    /* Primary: Vibrant Green #00B14F */
+    --primary: 147 100% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 147 100% 45%;
+
+    /* Secondary: Deep Teal #0F3E3E */
+    --secondary: 180 61% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted: Cream/Beige for subtle backgrounds */
+    --muted: 45 38% 95%;
+    --muted-foreground: 164 45% 35%;
+
+    /* Accent: Bright green for highlights */
+    --accent: 147 100% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success variant */
+    --success: 147 100% 35%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Destructive: Red for alerts */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 164 25% 88%;
+    --input: 164 25% 88%;
+    --ring: 147 100% 35%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(147 100% 35%), hsl(147 100% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(180 61% 15%), hsl(180 61% 25%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(45 38% 98%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(164 85% 12% / 0.05);
+    --shadow-md: 0 4px 16px hsl(164 85% 12% / 0.08);
+    --shadow-lg: 0 8px 32px hsl(164 85% 12% / 0.12);
+    --shadow-glow: 0 0 24px hsl(147 100% 45% / 0.2);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 164 85% 12%;
+    --sidebar-primary: 147 100% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 38% 95%;
+    --sidebar-accent-foreground: 164 85% 12%;
+    --sidebar-border: 164 25% 88%;
+    --sidebar-ring: 147 100% 35%;
+  }
+
+  .dark {
+    --background: 164 85% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 164 75% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 164 75% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 147 100% 45%;
+    --primary-foreground: 164 85% 8%;
+    --primary-glow: 147 100% 55%;
+
+    --secondary: 180 61% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 164 60% 15%;
+    --muted-foreground: 0 0% 75%;
+
+    --accent: 147 100% 45%;
+    --accent-foreground: 164 85% 8%;
+
+    --success: 147 100% 45%;
+    --success-foreground: 164 85% 8%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 164 85% 8%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 164 60% 20%;
+    --input: 164 60% 20%;
+    --ring: 147 100% 45%;
+
+    --sidebar-background: 164 85% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 147 100% 45%;
+    --sidebar-primary-foreground: 164 85% 8%;
+    --sidebar-accent: 164 60% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 164 60% 20%;
+    --sidebar-ring: 147 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom animations */
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}

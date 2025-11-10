@@ -1,0 +1,4 @@
+project_id = "fgpwezhwylhsjypissnj"
+
+[functions.financial-chat]
+verify_jwt = false
